@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'welcome_screen.dart'; // Imports Welcome Screen so we can navigate to it
+import 'welcome_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -37,13 +37,13 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
-                  // Navigator.push adds a new screen on top of the current one (like moving forward)
+                 
                   Navigator.push(
-                    context, // The current screen's location in the widget tree; needed so Navigator knows where to insert the new route
+                    context,
                     MaterialPageRoute(
-                      // MaterialPageRoute defines a screen transition with Android/iOS-style animation
+                   
                       builder: (context) => const WelcomeScreen(),
-                      // builder returns the widget (screen) to navigate to
+                     
                     ),
                   );
                 },
