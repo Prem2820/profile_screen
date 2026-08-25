@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'profile_screen.dart'; // Imports the Profile Screen file so it can be used as the home screen
+import 'profile_screen.dart'; 
 
 void main() {
   runApp(const MyApp());
