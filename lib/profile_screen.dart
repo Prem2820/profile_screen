@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'welcome_screen.dart'; // Needed for navigation to Welcome Screen
+import 'user_list_screen.dart'; // Needed for navigation to the User List screen
 
 class ProfileScreen extends StatefulWidget {
   // Changed from StatelessWidget to StatefulWidget because this screen
@@ -148,6 +149,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 child: const Text(
                   'Go to Welcome',
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                ),
+              ),
+              const SizedBox(height: 20), // Spacing before the new button
+
+              // ---------- NEW: USER LIST NAVIGATION BUTTON ----------
+              ElevatedButton(
+                onPressed: () {
+                  // Navigates to the User List screen, which fetches and displays
+                  // users from the jsonplaceholder API
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const UserListScreen()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                  // Different color from the other buttons so it's visually distinct
+                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+                ),
+                child: const Text(
+                  'View User List',
                   style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
               ),
