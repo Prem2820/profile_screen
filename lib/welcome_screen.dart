@@ -7,7 +7,7 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Welcome'), // AppBar title for Screen 2
+        title: const Text('Welcome'),
         backgroundColor: Colors.green,
         centerTitle: true,
       ),
@@ -15,7 +15,7 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.celebration, size: 80, color: Colors.green), // Simple decorative icon
+            const Icon(Icons.celebration, size: 80, color: Colors.green), 
             const SizedBox(height: 20),
             const Text(
               'Welcome, Premsai!',
@@ -30,7 +30,7 @@ class WelcomeScreen extends StatelessWidget {
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                // Navigator.pop removes the current screen, returning to the previous one (Profile Screen)
+                
                 Navigator.pop(context);
               },
               style: ElevatedButton.styleFrom(
